@@ -1,0 +1,224 @@
+<!--This project page is borrowed from Lingjie Liu's project page -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>GausSurf: Geometry-Guided 3D Gaussian Splatting for Surface Reconstruction </title>
+	
+	<!-- Meta tags for Zotero grab citation -->
+	<meta name="citation_title" content="GausSurf: Geometry-Guided 3D Gaussian Splatting for Surface Reconstruction">
+	<meta name="citation_author" content="Wang, Jiepeng">
+	<meta name="citation_author" content="Liu, Yuan">
+	<meta name="citation_author" content="Wang, Peng">
+	<meta name="citation_author" content="Lin, Cheng">
+	<meta name="citation_author" content="Hou, Junhui">
+	<meta name="citation_author" content="Li, Xin">
+	<meta name="citation_author" content="Komura, Taku">
+	<meta name="citation_author" content="Wang, Wenping">
+	<meta name="citation_publication_date" content="2024">
+	<meta name="citation_conference_title" content="arxiv">
+	<meta name="citation_pdf_url" content="https:">
+
+	<meta name="robots" content="index,follow">
+	<meta name="description" content="
+		3D Gaussian Splatting has achieved impressive performance in novel view synthesis with real-time rendering capabilities. However, reconstructing high-quality surfaces with fine details using 3D Gaussians remains a challenging task. In this work, we introduce GausSurf, a novel approach to high-quality surface reconstruction by employing geometry guidance from multi-view consistency in texture-rich areas and normal priors in texture-less areas of a scene. We observe that a scene can be mainly divided into two primary regions: 1) texture-rich and 2) texture-less areas. To enforce multi-view consistency at texture-rich areas, we enhance the reconstruction quality by incorporating a traditional patch-match based Multi-View Stereo (MVS) approach to guide the geometry optimization in an iterative scheme. This scheme allows for mutual reinforcement between the optimization of Gaussians and patch-match refinement, which significantly improves the reconstruction results and accelerates the training process. Meanwhile, for the texture-less areas, we leverage normal priors from a pre-trained normal estimation model to guide optimization. Extensive experiments on the DTU and Tanks and Temples datasets demonstrate that our method surpasses state-of-the-art methods in terms of reconstruction quality and computation time.		">
+	<link rel="author" href="https://jiepengwang.github.io/">
+
+
+	<!-- Fonts and stuff -->
+	<link href="./images/css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./images/project.css" media="screen">
+	<link rel="stylesheet" type="text/css" media="screen" href="./images/iconize.css">
+	<script src="./images/prettify.js.download"></script>
+</head>
+
+<body>
+	<div id="content">
+		<div id="content-inner">
+			<div class="section logos" style="text-align:center">
+				<a href="https://www.hku.hk/" target="_blank"><img src="./images/logo/hku.jpg" height="35" border="0"></a>
+				<a href="https://www.cityu.edu.hk/" target="_blank"><img src="./images/logo/cityu.jpeg" height="30" border="0"></a>				
+				<a href="https://hkust.edu.hk//" target="_blank"><img src="./images/logo/hkust.png" height="30" border="0"></a>				
+				<a href="https://www.ntu.edu.sg/" target="_blank"><img src="./images/logo/ntu.png" height="30" border="0"></a>				
+				<a href="https://www.tamu.edu/" target="_blank"><img src="./images/logo/tamu.jpg" height="35" ="0"=""></a>
+			</div>
+
+			<div class="section head">
+
+				<h1>GausSurf: Geometry-Guided 3D Gaussian Splatting for Surface Reconstruction</h1>
+
+				<div class="authors">
+					<a href="https://jiepengwang.github.io" target="_blank">Jiepeng Wang</a><sup> 1</sup>&nbsp;&nbsp;
+					<a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu</a><sup> 2,3</sup>&nbsp;&nbsp;
+					<a href="https://quartz-khaan-c6f.notion.site/Peng-Wang-0ab0a2521ecf40f5836581770c14219c" target="_blank">Peng Wang</a><sup> 1</sup>&nbsp;&nbsp;
+					<a href="https://clinplayer.github.io/" target="_blank">Cheng Lin</a><sup> 1</sup>&nbsp;&nbsp;
+					<a href="https://sites.google.com/site/junhuihoushomepage/biography" target="_blank">Junhui Hou</a><sup> 4</sup>&nbsp;&nbsp;
+					<a href="https://people.tamu.edu/~xinli/" target="_blank">Xin Li</a><sup> 5</sup>&nbsp;&nbsp;
+					<a href="https://www.cs.hku.hk/index.php/people/academic-staff/taku">Taku Komura</a><sup> 1</sup>&nbsp;&nbsp;
+					<a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html">Wenping Wang</a><sup> 5</sup>&nbsp;&nbsp;
+				</div>
+
+				<div class="affiliations">
+					<sup>1</sup><a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>&nbsp;&nbsp;
+					<sup>2</sup><a href="https://hkust.edu.hk/" target="_blank">Hong Kong University of Science and Technology</a>&nbsp;&nbsp;
+					<sup>3</sup><a href="https://www.ntu.edu.sg/" target="_blank">Nanyang Technological University </a>&nbsp;&nbsp;<br>
+					<sup>4</sup><a href="https://www.cityu.edu.hk/" target="_blank">City University of Hong Kong</a>&nbsp;&nbsp;
+					<sup>5</sup><a href="https://www.tamu.edu/" target="_blank">Texas A&amp;M University</a>&nbsp;&nbsp;
+				</div>
+
+				<div class="section downloads">
+					<!--<h2>Downloads</h2>-->
+					<center>
+						<ul>
+							<li class="grid">
+								<div class="griditem">
+									<a href="https://arxiv.org/abs/XXX" target="_blank" class="imageLink"><img src="./images/pdf.png"></a><br>
+									<a href="https://arxiv.org/abs/XXX">Paper</a>
+								</div>
+							</li>
+							<li class="grid">
+								<div class="griditem">
+									<a href="https://github.com/jiepengwang/GausSurf" target="_blank" class="imageLink"></a><img src="./images/data_ico.png"><br>
+									<a href="https://github.com/jiepengwang/GausSurf">Code</a>
+								</div>
+							</li>
+						</ul>
+					</center>
+				</div>
+			</div>
+
+
+			<div class="section abstract">
+				<h2>Abstract</h2><br>
+				<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<img class="thumbnail" src="./images/teaser.jpeg" style="width:90%; margin-bottom:20px">
+
+					</div>
+
+				</div>
+
+				<p class="text-justify">
+					3D Gaussian Splatting has achieved impressive performance in novel view synthesis with real-time rendering capabilities. However, reconstructing high-quality surfaces with fine details using 3D Gaussians remains a challenging task. In this work, we introduce GausSurf, a novel approach to high-quality surface reconstruction by employing geometry guidance from multi-view consistency in texture-rich areas and normal priors in texture-less areas of a scene. We observe that a scene can be mainly divided into two primary regions: 1) texture-rich and 2) texture-less areas. To enforce multi-view consistency at texture-rich areas, we enhance the reconstruction quality by incorporating a traditional patch-match based Multi-View Stereo (MVS) approach to guide the geometry optimization in an iterative scheme. This scheme allows for mutual reinforcement between the optimization of Gaussians and patch-match refinement, which significantly improves the reconstruction results and accelerates the training process. Meanwhile, for the texture-less areas, we leverage normal priors from a pre-trained normal estimation model to guide optimization. Extensive experiments on the DTU and Tanks and Temples datasets demonstrate that our method surpasses state-of-the-art methods in terms of reconstruction quality and computation time.
+				</p>
+
+			</div>
+
+			<div class="section abstract">
+				<h2>Introduction</h2>
+				
+				<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<img class="thumbnail" src="./images/method_overview.jpeg" style="width:90%; margin-bottom:20px">
+					</div>
+				</div>
+				
+				<p class="text-justify">
+					In this paper, we present a new 3D Gaussian Surface based method, GausSurf, for efficient and
+					high-quality multiview surface reconstruction with geometric gauidance (1) from patch-match and normal priors. For texture-rich areas,
+					we utilize multi-view consistency constraints to guide the optimization process. For texture-less regions, we incorporate normal priors from a pretrained model to provide
+					supplementary supervision signals. By effectively integrating these geometric priors, our method achieves both high-quality and efficient surface reconstruction.
+				</p>
+			</div>
+
+			<div class="section abstract">
+				<h2>Reconstruction results on DTU</h2><br>
+				<div class="row" style="margin-bottom:5px">
+					<p class="text-justify">
+						In this part, we show our model's reconstruction results and comparisons on the DTU dataset.
+					</p>
+
+					<div class="col" style="text-align:center">
+						<img class="thumbnail" src="./images/dtu.jpeg" style="width:90%; margin-bottom:20px">
+					</div>
+
+
+					<!-- <video width="80%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+						<source src="./videos/dtu/dtu_merge.avi" type="video/avi">
+					</video> -->
+
+					<p class="text-justify">
+						Our reconstruction results on all the scenes:
+					</p>
+					<div class="row" style="margin-bottom:5px">
+						<div class="col" style="text-align:center">
+							<video width="90%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+							<source src="./videos/dtu/dtu_merge.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="section abstract">
+
+				<h2>Reconstruction results on TnT and Mip-NeRF360</h2><br>
+				<div class="row" style="margin-bottom:5px">
+					<p class="text-justify">
+						In this part, we show our model's reconstruction results and comparisons on the Tanks and Temples dataset and Mip-NeRF360 dataset.
+					</p>
+				</div>
+				<div class="col" style="text-align:center">
+					<img class="thumbnail" src="./images/tnt-mipnerf.jpeg" style="width:90%; margin-bottom:20px">
+				</div>
+	
+				<p class="text-justify"  style="margin-bottom:10px">
+					Our reconstruction results on Mip-NeRF360, each frame shows the rendered RGB, depth, normal from Gaussians and rendered mesh:
+				</p>
+				<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<video width="90%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+							<source src="./videos/mipnerf360/garden.mp4" type="video/mp4">
+						</video>
+						<video width="90%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+							<source src="./videos/mipnerf360/bicycle.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+
+				<p class="text-justify" style="margin-bottom:10px">
+					Our reconstruction results on TnT:
+				</p>
+				<div class="row" style="margin-bottom:5px">
+					<div class="col" style="text-align:center">
+						<video width="90%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+							<source src="./videos/tnt/caterpillar.mp4" type="video/mp4">
+						</video>
+						<video width="90%" playsinline="" controls autoplay loop="loop" preload="" muted="">
+							<source src="./videos/tnt/ignatius.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section list">
+				<h2>Citation</h2>
+				<div class="section bibtex">
+					<pre>@article{wang2024GausSurf,
+    title={GausSurf: Geometry-Guided 3D Gaussian Splatting for Surface Reconstruction}, 
+    author={Wang, Jiepeng and Liu, Yuan and Wang, Peng and Lin, Cheng and Hou, Junhui and Li, Xin and Komura, Taku and Wang, Wenping},
+    journal={arXiv preprint arXiv:XXXX},
+    year={2024}
+}
+				</pre></div>
+			</div>
+						
+			
+			<div class="section">
+				<hr class="smooth">
+				This page is <a href="http://www.zotero.org/" target="_blank">Zotero</a> translator friendly. Page last updated 
+				<script type="text/javascript">
+					var m = "This page was last updated: " + document.lastModified;
+					var p = m.length - 9;
+					document.writeln("<left>");
+					document.write(m.substring(p, 0) + ".");
+					document.writeln("</left>");
+				</script>
+
+			</div>
+		</div>
+	</div>
+
+</div></body></html>
